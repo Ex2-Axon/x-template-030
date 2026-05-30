@@ -1,0 +1,513 @@
+# X-Template V.0.0.0-Genesis
+
+> Cyberpunk Glassmorphism starter template — React + TypeScript + Vite
+
+[![Deploy to GitHub Pages](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml)
+[![Bluesky](https://img.shields.io/badge/Bluesky-%40microtronic.bsky.social-0085ff?logo=bluesky&logoColor=white)](https://bsky.app/profile/microtronic.bsky.social)
+
+**Live demo:** https://ex2-axon.github.io/x-template/
+
+![Screenshot](screenshot.png)
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| **Framework** | React 19 + TypeScript |
+| **Build tool** | Vite 8 |
+| **Styling** | CSS (Glassmorphism + Neon) + Tailwind CSS 4 |
+| **Package manager** | pnpm |
+| **Deploy** | GitHub Pages (auto on push) |
+
+---
+
+## Features
+
+- Cyberpunk glassmorphism UI with full animation
+- Neon glow effects — cyan, pink, purple, green
+- Animated grid background + floating particles
+- Glitch text effect on title
+- Scanline CRT overlay
+- Orbit rings on hero image
+- Staggered entrance animations
+- Auto-deploy to GitHub Pages on push
+- Auto-post to Discord, Bluesky, X on push
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+---
+
+## GitHub Actions Workflows
+
+| Workflow | Trigger | Description |
+|---|---|---|
+| `deploy.yml` | push to main | Build & deploy to GitHub Pages |
+| `discord-notify.yml` | push to main | Send release embed to Discord |
+| `bluesky-notify.yml` | push to main | Post release to Bluesky |
+| `x-notify.yml` | push to main | Post release to X (Twitter) |
+
+### Required Secrets
+
+Go to **Settings → Secrets and variables → Actions** and add:
+
+| Secret | Description |
+|---|---|
+| `DISCORD_WEBHOOK_URL` | Discord webhook URL |
+| `BSKY_IDENTIFIER` | Bluesky handle (e.g. `microtronic.bsky.social`) |
+| `BSKY_APP_PASSWORD` | Bluesky app password |
+| `X_API_KEY` | X Consumer Key |
+| `X_API_SECRET` | X Consumer Secret |
+| `X_ACCESS_TOKEN` | X Access Token |
+| `X_ACCESS_TOKEN_SECRET` | X Access Token Secret |
+
+---
+
+## Project Structure
+
+```
+x-template/
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml
+│       ├── discord-notify.yml
+│       ├── bluesky-notify.yml
+│       └── x-notify.yml
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## Connect
+
+- Bluesky: [@microtronic.bsky.social](https://bsky.app/profile/microtronic.bsky.social)
+- Discord: [Join server](https://discord.gg/8Zeq8VCU)
+- GitHub: [Ex2-Axon](https://github.com/Ex2-Axon)
+
+## Generation Prompt
+```text
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 30,
+  "date": "2026-05-30",
+  "version": "1.30.0",
+  "project_name": "x-template-030",
+  "theme": {
+    "name": "Vaporwave",
+    "style": "vaporwave",
+    "mood": "nostalgic, dreamy, pastel, retro-futuristic"
+  },
+  "palette": {
+    "background": "#0d0221",
+    "surface": "#1a0533",
+    "primary": "#ff71ce",
+    "accent": "#01cdfe",
+    "text": "#fffb96",
+    "muted": "#b967ff"
+  },
+  "typography": {
+    "heading": "Orbitron",
+    "body": "Rajdhani",
+    "size": "large"
+  },
+  "layout": {
+    "structure": "centered",
+    "density": "spacious",
+    "border_style": "neon gradient"
+  },
+  "animation": {
+    "level": "moderate",
+    "style": "fade, float, gradient shift"
+  },
+  "components": {
+    "hero_text": "AESTHETIC",
+    "subtitle": "A E S T H E T I C  V I B E S",
+    "button_label": "FEEL_",
+    "badge_text": "ONLINE — 1989"
+  },
+  "commit_message": "feat: UI Day 30 — Vaporwave [fallback]",
+  "source": "fallback",
+  "selected_component": {
+    "category": "Cards",
+    "component": "AnnixArt_wonderful-liger-82.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Cards\\AnnixArt_wonderful-liger-82.html",
+    "content": "<div class=\"container\">\n  <div class=\"coffee-header\">\n    <div class=\"coffee-header__buttons coffee-header__button-one\"></div>\n    <div class=\"coffee-header__buttons coffee-header__button-two\"></div>\n    <div class=\"coffee-header__display\"></div>\n    <div class=\"coffee-header__details\"></div>\n  </div>\n  <div class=\"coffee-medium\">\n    <div class=\"coffe-medium__exit\"></div>\n    <div class=\"coffee-medium__arm\"></div>\n    <div class=\"coffee-medium__liquid\"></div>\n    <div class=\"coffee-medium__smoke coffee-medium__smoke-one\"></div>\n    <div class=\"coffee-medium__smoke coffee-medium__smoke-two\"></div>\n    <div class=\"coffee-medium__smoke coffee-medium__smoke-three\"></div>\n    <div class=\"coffee-medium__smoke coffee-medium__smoke-for\"></div>\n    <div class=\"coffee-medium__cup\"></div>\n  </div>\n  <div class=\"coffee-footer\"></div>\n</div>\n\n<style>\n/* Tags: action, social, card */\n.container {\n  width: 300px;\n  height: 280px;\n  position: absolute;\n  top: calc(50% - 140px);\n  left: calc(50% - 150px);\n}\n.coffee-header {\n  width: 100%;\n  height: 80px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: #ddcfcc;\n  border-radius: 10px;\n}\n.coffee-header__buttons {\n  width: 25px;\n  height: 25px;\n  position: absolute;\n  top: 25px;\n  background-color: #282323;\n  border-radius: 50%;\n}\n.coffee-header__buttons::after {\n  content: \"\";\n  width: 8px;\n  height: 8px;\n  position: absolute;\n  bottom: -8px;\n  left: calc(50% - 4px);\n  background-color: #615e5e;\n}\n.coffee-header__button-one {\n  left: 15px;\n}\n.coffee-header__button-two {\n  left: 50px;\n}\n.coffee-header__display {\n  width: 50px;\n  height: 50px;\n  position: absolute;\n  top: calc(50% - 25px);\n  left: calc(50% - 25px);\n  border-radius: 50%;\n  background-color: #9acfc5;\n  border: 5px solid #43beae;\n  box-sizing: border-box;\n}\n.coffee-header__details {\n  width: 8px;\n  height: 20px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background-color: #9b9091;\n  box-shadow: -12px 0 0 #9b9091, -24px 0 0 #9b9091;\n}\n.coffee-medium {\n  width: 90%;\n  height: 160px;\n  position: absolute;\n  top: 80px;\n  left: calc(50% - 45%);\n  background-color: #bcb0af;\n}\n.coffee-medium:before {\n  content: \"\";\n  width: 90%;\n  height: 100px;\n  background-color: #776f6e;\n  position: absolute;\n  bottom: 0;\n  left: calc(50% - 45%);\n  border-radius: 20px 20px 0 0;\n}\n.coffe-medium__exit {\n  width: 60px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: calc(50% - 30px);\n  background-color: #231f20;\n}\n.coffe-medium__exit::before {\n  content: \"\";\n  width: 50px;\n  height: 20px;\n  border-radius: 0 0 50% 50%;\n  position: absolute;\n  bottom: -20px;\n  left: calc(50% - 25px);\n  background-color: #231f20;\n}\n.coffe-medium__exit::after {\n  content: \"\";\n  width: 10px;\n  height: 10px;\n  position: absolute;\n  bottom: -30px;\n  left: calc(50% - 5px);\n  background-color: #231f20;\n}\n.coffee-medium__arm {\n  width: 70px;\n  height: 20px;\n  position: absolute;\n  top: 15px;\n  right: 25px;\n  background-color: #231f20;\n}\n.coffee-medium__arm::before {\n  content: \"\";\n  width: 15px;\n  height: 5px;\n  position: absolute;\n  top: 7px;\n  left: -15px;\n  background-color: #9e9495;\n}\n.coffee-medium__cup {\n  width: 80px;\n  height: 47px;\n  position: absolute;\n  bottom: 0;\n  left: calc(50% - 40px);\n  background-color: #fff;\n  border-radius: 0 0 70px 70px / 0 0 110px 110px;\n}\n.coffee-medium__cup::after {\n  content: \"\";\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 6px;\n  right: -13px;\n  border: 5px solid #fff;\n  border-radius: 50%;\n}\n@keyframes liquid {\n  0% {\n    height: 0px;\n    opacity: 1;\n  }\n  5% {\n    height: 0px;\n    opacity: 1;\n  }\n  20% {\n    height: 62px;\n    opacity: 1;\n  }\n  95% {\n    height: 62px;\n    opacity: 1;\n  }\n  100% {\n    height: 62px;\n    opacity: 0;\n  }\n}\n.coffee-medium__liquid {\n  width: 6px;\n  height: 63px;\n  opacity: 0;\n  position: absolute;\n  top: 50px;\n  left: calc(50% - 3px);\n  background-color: #74372b;\n  animation: liquid 4s 4s linear infinite;\n}\n.coffee-medium__smoke {\n  width: 8px;\n  height: 20px;\n  position: absolute;\n  border-radius: 5px;\n  background-color: #b3aeae;\n}\n@keyframes smokeOne {\n  0% {\n    bottom: 20px;\n    opacity: 0;\n  }\n  40% {\n    bottom: 50px;\n    opacity: 0.5;\n  }\n  80% {\n    bottom: 80px;\n    opacity: 0.3;\n  }\n  100% {\n    bottom: 80px;\n    opacity: 0;\n  }\n}\n@keyframes smokeTwo {\n  0% {\n    bottom: 40px;\n    opacity: 0;\n  }\n  40% {\n    bottom: 70px;\n    opacity: 0.5;\n  }\n  80% {\n    bottom: 80px;\n    opacity: 0.3;\n  }\n  100% {\n    bottom: 80px;\n    opacity: 0;\n  }\n}\n.coffee-medium__smoke-one {\n  opacity: 0;\n  bottom: 50px;\n  left: 102px;\n  animation: smokeOne 3s 4s linear infinite;\n}\n.coffee-medium__smoke-two {\n  opacity: 0;\n  bottom: 70px;\n  left: 118px;\n  animation: smokeTwo 3s 5s linear infinite;\n}\n.coffee-medium__smoke-three {\n  opacity: 0;\n  bottom: 65px;\n  right: 118px;\n  animation: smokeTwo 3s 6s linear infinite;\n}\n.coffee-medium__smoke-for {\n  opacity: 0;\n  bottom: 50px;\n  right: 102px;\n  animation: smokeOne 3s 5s linear infinite;\n}\n.coffee-footer {\n  width: 95%;\n  height: 15px;\n  position: absolute;\n  bottom: 25px;\n  left: calc(50% - 47.5%);\n  background-color: #41bdad;\n  border-radius: 10px;\n}\n.coffee-footer::after {\n  content: \"\";\n  width: 106%;\n  height: 26px;\n  position: absolute;\n  bottom: -25px;\n  left: -8px;\n  background-color: #000;\n}\n\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Cards
+- Component: AnnixArt_wonderful-liger-82.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Cards\AnnixArt_wonderful-liger-82.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<div class="container">
+  <div class="coffee-header">
+    <div class="coffee-header__buttons coffee-header__button-one"></div>
+    <div class="coffee-header__buttons coffee-header__button-two"></div>
+    <div class="coffee-header__display"></div>
+    <div class="coffee-header__details"></div>
+  </div>
+  <div class="coffee-medium">
+    <div class="coffe-medium__exit"></div>
+    <div class="coffee-medium__arm"></div>
+    <div class="coffee-medium__liquid"></div>
+    <div class="coffee-medium__smoke coffee-medium__smoke-one"></div>
+    <div class="coffee-medium__smoke coffee-medium__smoke-two"></div>
+    <div class="coffee-medium__smoke coffee-medium__smoke-three"></div>
+    <div class="coffee-medium__smoke coffee-medium__smoke-for"></div>
+    <div class="coffee-medium__cup"></div>
+  </div>
+  <div class="coffee-footer"></div>
+</div>
+
+<style>
+/* Tags: action, social, card */
+.container {
+  width: 300px;
+  height: 280px;
+  position: absolute;
+  top: calc(50% - 140px);
+  left: calc(50% - 150px);
+}
+.coffee-header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ddcfcc;
+  border-radius: 10px;
+}
+.coffee-header__buttons {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 25px;
+  background-color: #282323;
+  border-radius: 50%;
+}
+.coffee-header__buttons::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  bottom: -8px;
+  left: calc(50% - 4px);
+  background-color: #615e5e;
+}
+.coffee-header__button-one {
+  left: 15px;
+}
+.coffee-header__button-two {
+  left: 50px;
+}
+.coffee-header__display {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  border-radius: 50%;
+  background-color: #9acfc5;
+  border: 5px solid #43beae;
+  box-sizing: border-box;
+}
+.coffee-header__details {
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #9b9091;
+  box-shadow: -12px 0 0 #9b9091, -24px 0 0 #9b9091;
+}
+.coffee-medium {
+  width: 90%;
+  height: 160px;
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 45%);
+  background-color: #bcb0af;
+}
+.coffee-medium:before {
+  content: "";
+  width: 90%;
+  height: 100px;
+  background-color: #776f6e;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 45%);
+  border-radius: 20px 20px 0 0;
+}
+.coffe-medium__exit {
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 30px);
+  background-color: #231f20;
+}
+.coffe-medium__exit::before {
+  content: "";
+  width: 50px;
+  height: 20px;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 25px);
+  background-color: #231f20;
+}
+.coffe-medium__exit::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 5px);
+  background-color: #231f20;
+}
+.coffee-medium__arm {
+  width: 70px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background-color: #231f20;
+}
+.coffee-medium__arm::before {
+  content: "";
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+  background-color: #9e9495;
+}
+.coffee-medium__cup {
+  width: 80px;
+  height: 47px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 40px);
+  background-color: #fff;
+  border-radius: 0 0 70px 70px / 0 0 110px 110px;
+}
+.coffee-medium__cup::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 6px;
+  right: -13px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+@keyframes liquid {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+  5% {
+    height: 0px;
+    opacity: 1;
+  }
+  20% {
+    height: 62px;
+    opacity: 1;
+  }
+  95% {
+    height: 62px;
+    opacity: 1;
+  }
+  100% {
+    height: 62px;
+    opacity: 0;
+  }
+}
+.coffee-medium__liquid {
+  width: 6px;
+  height: 63px;
+  opacity: 0;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 3px);
+  background-color: #74372b;
+  animation: liquid 4s 4s linear infinite;
+}
+.coffee-medium__smoke {
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #b3aeae;
+}
+@keyframes smokeOne {
+  0% {
+    bottom: 20px;
+    opacity: 0;
+  }
+  40% {
+    bottom: 50px;
+    opacity: 0.5;
+  }
+  80% {
+    bottom: 80px;
+    opacity: 0.3;
+  }
+  100% {
+    bottom: 80px;
+    opacity: 0;
+  }
+}
+@keyframes smokeTwo {
+  0% {
+    bottom: 40px;
+    opacity: 0;
+  }
+  40% {
+    bottom: 70px;
+    opacity: 0.5;
+  }
+  80% {
+    bottom: 80px;
+    opacity: 0.3;
+  }
+  100% {
+    bottom: 80px;
+    opacity: 0;
+  }
+}
+.coffee-medium__smoke-one {
+  opacity: 0;
+  bottom: 50px;
+  left: 102px;
+  animation: smokeOne 3s 4s linear infinite;
+}
+.coffee-medium__smoke-two {
+  opacity: 0;
+  bottom: 70px;
+  left: 118px;
+  animation: smokeTwo 3s 5s linear infinite;
+}
+.coffee-medium__smoke-three {
+  opacity: 0;
+  bottom: 65px;
+  right: 118px;
+  animation: smokeTwo 3s 6s linear infinite;
+}
+.coffee-medium__smoke-for {
+  opacity: 0;
+  bottom: 50px;
+  right: 102px;
+  animation: smokeOne 3s 5s linear infinite;
+}
+.coffee-footer {
+  width: 95%;
+  height: 15px;
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 47.5%);
+  background-color: #41bdad;
+  border-radius: 10px;
+}
+.coffee-footer::after {
+  content: "";
+  width: 106%;
+  height: 26px;
+  position: absolute;
+  bottom: -25px;
+  left: -8px;
+  background-color: #000;
+}
+
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes — TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: nostalgic, dreamy, pastel, retro-futuristic
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive — Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44×44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic. All rights reserved.`
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `AESTHETIC — Vaporwave | Microtronic`
+- Add `<meta name="description">` with the subtitle: `A E S T H E T I C  V I B E S`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections — no skipping levels
+
+## After saving all files
+1. Update `version` in `package.json` to `1.30.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild
+
+```
